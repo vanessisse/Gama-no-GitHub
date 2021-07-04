@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border, margin e padding</title>
+
+    <style>
+        .parent-container {
+            height: 200px;
+            width: 200px;
+            border: 1px solid orange;
+            background-color: peachpuff;
+        }
+
+        .my-div {
+            background-color: #ff96a8;
+            padding: 4px 4px; /*Borda top e bottom (4px cada); borda left e right (4px cada) — em torno de "Olá, mundo!"*/
+            margin: 2px 2px; /*Define a margem nos 4 lados do elemento.*/
+            border: 4px dashed #db3551; /*Adiciona um contorno ao elemento.*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent-container">
+        <div class="my-div">
+            Olá, mundo!
+        </div>
+    </div>
+</body>
+
+</html>
