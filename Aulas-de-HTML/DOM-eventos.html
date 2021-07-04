@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <title>DOM - Eventos</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Texto descritivo da página web" />
+    <meta name="author" content="Gama Academy" />
+    <meta name="viewport" content="width=device-width, initial-scale-=1.0" />
+
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+
+    </header>
+    <!-- Fim do cabeçalho -->
+
+    <!-- Conteúdo principal-->
+    <main>
+
+        <!-- Que são eventos?
+        Eventos são ações ou ocorrências, as quais você pode responder de alguma forma no sistema que está sendo desenvolvido. Por exemplo: o usuário clica em um botão na página web e a ação é respondida com o aparecimento de uma caixa de informações na tela.
+
+        Fonte: MDN Web Docs
+        -->
+
+        <p id="texto1">O chocolate é um alimento feito com base na amêndoa fermentada e torrada do cacau. Sua origem remonta às
+            civilizações pré-colombianas da América Central.</p>
+
+        <button id="botao1" onclick="atualizacao()">Atualização de texto</button>
+
+        <script type="text/javascript">
+        
+            function atualizacao() {
+                var texto1 = document.getElementById("texto1");
+
+                texto1.innerText = "Milka!";
+            }
+
+        </script>
+
+    </main>
+    <!-- Fim do conteúdo principal -->
+
+    <!-- Rodapé -->
+    <footer>
+
+    </footer>
+    <!-- Fim do rodapé -->
+
+</body>
+
+</html>
