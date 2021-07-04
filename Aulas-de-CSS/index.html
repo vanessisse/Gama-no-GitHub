@@ -4,11 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag style</title>
+    <title>Tag style e propriedades CSS</title>
     <style>
         div {
+            /*
             border: solid 2px orange;
+            Esta única linha representa a mesma coisa que as linhas que seguem:
+            */
+
+            border-color: orange;
+            border-style: solid;
+            border-bottom: 2px;
+            border-top: 2px;
+            border-left: 2px;
+            border-right: 2px;
+
+            font-family: 'Courier New', Courier, monospace;
+            /*
+            A fonte Courier substitui a Courier New, caso esta não seja encontrada. O mesmo se dá com a fonte seguinte, substituindo Courier.
+            */
+            
+            background-color: #ffdab9;
+            /*
+            background-color: peachpuff;
+            background-color: rgb(255, 218, 185);
+            
+            Essas são formas de colocar a mesma cor.
+            */
+
+            margin: 10px; /*Este valor é absoluto. São 10px em qualquer tamanho de tela.*/
+            
+            /*
+            margin: 90%;            
+            Seguindo a hierarquia do CSS em que <body> é o pai, margin assume 90% dele.
+            */
         }
+
     </style>
 </head>
 <body>
