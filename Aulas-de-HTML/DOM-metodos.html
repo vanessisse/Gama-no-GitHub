@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <title>DOM - Métodos</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Texto descritivo da página web" />
+    <meta name="author" content="Gama Academy" />
+    <meta name="viewport" content="width=device-width, initial-scale-=1.0" />
+
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+
+    </header>
+    <!-- Fim do cabeçalho -->
+
+    <!-- Conteúdo principal-->
+    <main>
+
+        <!-- Que são métodos?
+        Um método é uma função associada a um objeto, ou, simplesmente, um método é uma propriedade de um objeto que é
+        uma função. Métodos são definidos da forma que as funções normais são definidas, exceto que eles tenham que ser
+        atribuídos como propriedade de um objeto.
+
+        Fonte: MDN Web Docs
+        -->
+
+        <p id="article-description">O chocolate é um alimento feito com base na amêndoa fermentada e torrada do cacau.
+            Sua origem remonta às
+            civilizações pré-colombianas da América Central.</p>
+
+        <p>O chocolate é um alimento feito com base na amêndoa fermentada e torrada do cacau.
+            Sua origem remonta às
+            civilizações pré-colombianas da América Central.</p>
+
+        <script type="text/javascript">
+
+            var paragrafo = document.getElementById("article-description");
+            
+            paragrafo.style.color = "brown";
+
+            paragrafo.innerText = "Texto mudou!";
+
+        </script>
+
+    </main>
+    <!-- Fim do conteúdo principal -->
+
+    <!-- Rodapé -->
+    <footer>
+
+    </footer>
+    <!-- Fim do rodapé -->
+
+</body>
+
+</html>
