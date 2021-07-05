@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEXBOX — flex-grow, flex-shrink e flex-basis</title>
+
+    <style>
+
+        /*
+        Funcionamento do flex-grow:
+
+        Largura (width) total da flex-div: 500px
+        Fator de crescimento (flex-grow) da child-div1: 2
+        Fator de crescimento da child-div2: 1
+        Crescimento somado de ambas: 3
+        Espaço que sobra da soma de ambas as flex-basis (100px + 100px): 300px (de 500px)
+
+        Cálculo:
+        child-div1: 2/3 * 300px = 200px (pode crescer mais 200px, além dos 100px iniciais)
+        child-div2: 1/3 * 300px = 100px (pode crescer mais 100px, além dos 100px iniciais)
+        Crescimento total: 500px (ocupando toda a flex-div)
+        */
+
+        /*
+        Flex-basis é tamanho base inicial da div.
+        */
+
+        /*
+        Funcionamento do flex-shrink:
+        
+        Largura (width) total da flex-div: 500px
+        Fator de encolhimento (flex-shrink) da child-div1: 2
+        Fator de encolhimento da child-div2: 1
+        Tamanho inicial (flex-basis) de ambas: 300px cada, totalizando 600px
+        Considerando a largura da flex-div, o espaço sobrando é de -100px        
+
+        Cálculo:
+        child-div1: (2 * 300) / (600 * 300) = 600 / 900 = .667 * -100px = -66.7px (total que deve encolher para caber em 500px)
+        child-div2: (1 * 300) / (600 * 300) = 300 / 900 = .333 * -100px = -33.3px
+        
+        */
+
+        .flex-div {
+            width: 500px;
+            display: flex;
+        }
+
+        .child-div1 {
+            border: 1px solid orange;
+            flex-basis: 300px;
+            /*
+            flex-basis: 100px;
+            flex-grow: 2;  (100px + 200px)
+            */
+            flex-shrink: 2;
+        }
+
+        .child-div2 {
+            border: 1px solid orange;
+            flex-basis: 300px;
+            /*
+            flex-basis: 100px;
+            flex-grow: 1; (100px + 100px)
+            */
+            flex-shrink: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-div">
+        <div class="child-div1">
+            1
+        </div>
+        <div class="child-div2">
+            2
+        </div>
+    </div>
+</body>
+
+</html>
