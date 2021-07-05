@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidade de seletores</title>
+
+    <style>
+        /*
+
+        Especificidade é a maneira que o browser utiliza para aplicar um estilo em um determinado elemento quando duas classes entram em conflito.
+        Cada seletor tem um determinado "peso" e, quando um elemento tem estilos que entram em conflito, o navegador aplica o estilo que "ganha" em especificidade.
+
+        CSS Specifity calculator: https://specificity.keegan.st/
+
+        */
+
+        .my-div {
+            color: deeppink;
+        }
+
+        div {
+            color: orange;
+        }
+
+        #my-div-id {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-div-id" class="my-div">
+        Olá, mundo!
+    </div>
+</body>
+
+</html>
