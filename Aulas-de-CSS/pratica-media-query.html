@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática — Media Query</title>
+
+    <!-- Fonte Open Sans importada do Google Fonts (https://fonts.google.com/) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+
+        .card-container {
+            display: flex;
+            width: 100%; /* Os cards ocuparão a tela inteira */
+            flex-wrap: wrap; /* O tamanho dos cards são mantidos e a linha é quebrada */
+            justify-content: space-between; /* Espaço entre eles */
+        }
+
+        .card {
+            margin: 10px 0; /* Espaço de 10px no eixo Y */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .description {
+            text-align: center;
+            margin: 8px 2px;
+            font-size: 15px;
+        }
+
+        .price {
+            font-weight: 500px;
+        }
+
+        .buy-button {
+            border-radius: 5px; /* Botão com bordas arredondadas */
+            background-color: pink;
+            margin: 8px 0;
+            padding: 5px;
+            border: 1px solid orange;
+        }
+
+        .buy-button:hover {
+            cursor: pointer; /* Troca de cursor */
+            background-color: peachpuff; /* A cor de fundo do botão passará de pink à peachpuff */
+            color: deeppink; /* A cor da letra passará de black à deepink */
+        }
+
+        @media (max-width: 700px) {
+            .buy-button {
+                width: 100%; /* Quando a largura da tela do dispositivo for de 700px, o botão ocupará 100% do tamanho do card */
+                border-radius: 0;
+            }
+            .card {
+                flex-basis: 100%; /* No dispositivo mobile, o card ocupará 100% da tela */
+            }
+            .description {
+                display: none; /* A descrição do produto sumirá */
+            }
+            img {
+                display: none; /* As imagens dos produtos não aparecerão quando o display for menor que 700px*/
+            }
+        }
+
+        /*
+        .product-name {
+            font-family: 'Open Sans', sans-serif;
+        }
+        */
+
+        div {
+            border: 1px solid orange;
+            width: 310px;
+        }
+
+        img {
+            width: 150px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card">
+            <h3 class="product-name">Produto</h3>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51-zUE4TQjL._AC_SX425_.jpg" />
+            <p class="description">Cupcake ipsum dolor sit amet pie caramels jelly chocolate cake. Cheesecake oat cake
+                gummies cupcake macaroon topping.</p>
+            <span class="price">Preço: R$XXXX,XX</span>
+            <button class="buy-button">Adicionar ao carrinho</button>
+        </div>
+        <div class="card">
+            <h3 class="product-name">Produto</h3>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51-zUE4TQjL._AC_SX425_.jpg" />
+            <p class="description">Cupcake ipsum dolor sit amet pie caramels jelly chocolate cake. Cheesecake oat cake
+                gummies cupcake macaroon topping.</p>
+            <span class="price">Preço: R$XXXX,XX</span>
+            <button class="buy-button">Adicionar ao carrinho</button>
+        </div>
+        <div class="card">
+            <h3 class="product-name">Produto</h3>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51-zUE4TQjL._AC_SX425_.jpg" />
+            <p class="description">Cupcake ipsum dolor sit amet pie caramels jelly chocolate cake. Cheesecake oat cake
+                gummies cupcake macaroon topping.</p>
+            <span class="price">Preço: R$XXXX,XX</span>
+            <button class="buy-button">Adicionar ao carrinho</button>
+        </div>
+        <div class="card">
+            <h3 class="product-name">Produto</h3>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51-zUE4TQjL._AC_SX425_.jpg" />
+            <p class="description">Cupcake ipsum dolor sit amet pie caramels jelly chocolate cake. Cheesecake oat cake
+                gummies cupcake macaroon topping.</p>
+            <span class="price">Preço: R$XXXX,XX</span>
+            <button class="buy-button">Adicionar ao carrinho</button>
+        </div>
+        <div class="card">
+            <h3 class="product-name">Produto</h3>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51-zUE4TQjL._AC_SX425_.jpg" />
+            <p class="description">Cupcake ipsum dolor sit amet pie caramels jelly chocolate cake. Cheesecake oat cake
+                gummies cupcake macaroon topping.</p>
+            <span class="price">Preço: R$XXXX,XX</span>
+            <button class="buy-button">Adicionar ao carrinho</button>
+        </div>
+        <div class="card">
+            <h3 class="product-name">Produto</h3>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51-zUE4TQjL._AC_SX425_.jpg" />
+            <p class="description">Cupcake ipsum dolor sit amet pie caramels jelly chocolate cake. Cheesecake oat cake
+                gummies cupcake macaroon topping.</p>
+            <span class="price">Preço: R$XXXX,XX</span>
+            <button class="buy-button">Adicionar ao carrinho</button>
+        </div>
+        <div class="card">
+            <h3 class="product-name">Produto</h3>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51-zUE4TQjL._AC_SX425_.jpg" />
+            <p class="description">Cupcake ipsum dolor sit amet pie caramels jelly chocolate cake. Cheesecake oat cake
+                gummies cupcake macaroon topping.</p>
+            <span class="price">Preço: R$XXXX,XX</span>
+            <button class="buy-button">Adicionar ao carrinho</button>
+        </div>
+        <div class="card">
+            <h3 class="product-name">Produto</h3>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51-zUE4TQjL._AC_SX425_.jpg" />
+            <p class="description">Cupcake ipsum dolor sit amet pie caramels jelly chocolate cake. Cheesecake oat cake
+                gummies cupcake macaroon topping.</p>
+            <span class="price">Preço: R$XXXX,XX</span>
+            <button class="buy-button">Adicionar ao carrinho</button>
+        </div>
+    </div>
+</body>
+
+</html>
