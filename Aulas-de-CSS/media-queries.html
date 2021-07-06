@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries</title>
+
+    <style>
+        /*
+        
+        As media queries atribuem diferentes estilos CSS para diferentes resoluções de tela possibilitando que haja um visual diferente a cada resolução detectada.
+        Neste exemplo, a cor do background mudará de pink para peachpuff quando sua largura chegar a 500px no browser e voltará a ser pink quando chegar a 601px.
+
+        */
+
+        .my-div {
+            height: 20px;
+            background-color: pink;
+        }
+
+        /*
+
+        A media query será aplicada de 500px a 600px na cor peachpuff.
+
+        */
+
+        @media (max-width: 600px) and (min-width: 500px) {
+            .my-div {
+                background-color: peachpuff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="my-div">
+        Aulas na Gama Academy
+    </div>
+</body>
+
+</html>
